@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="SeqX.fs" />
+    <Compile Include="ArrayX.fs" />
     <Compile Include="ListX.fs" />
   </ItemGroup>
 
