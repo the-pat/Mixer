@@ -1,5 +1,4 @@
-<p align="center" style="background: rgb(250,235,215);
-background: linear-gradient(126deg, rgba(250,235,215,1) 60%, rgba(169,195,244,1) 100%);">
+<p align="center">
   <img src="./assets/mixer.svg" alt="Food Mixer by Dmitry Mirolyubov">
 </p>
 
@@ -12,6 +11,12 @@ background: linear-gradient(126deg, rgba(250,235,215,1) 60%, rgba(169,195,244,1)
 This is a simple library to simplify the process of creating a randomized list of integers.
 
 ## Usage
+
+```
+
+dotnet run --project src/Mixer.Console/Mixer.Console.fsproj -- 0 10_000
+
+```
 
 ```fsharp
 
