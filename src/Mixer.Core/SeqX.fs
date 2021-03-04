@@ -7,3 +7,8 @@ module SeqX =
             seq { last .. first } |> Seq.rev
         else
             seq { first .. last }
+
+    let shuffle2 (rnd: System.Random) seq = seq |> Seq.sortBy (fun _ -> rnd.Next())
+
+    let shuffle seq =
+        let rnd = System.Random() in seq |> shuffle2 rnd
