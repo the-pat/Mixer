@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Compile Include="SeqX.fs" />
+    <Compile Include="ListX.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 

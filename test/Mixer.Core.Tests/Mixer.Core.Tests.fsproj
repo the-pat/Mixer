@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Compile Include="SeqX.Tests.fs" />
+    <Compile Include="ListX.Tests.fs" />
     <Compile Include="Tests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
