@@ -2,4 +2,6 @@ namespace Mixer.Core
 
 module ListX =
     let shuffledList min max =
-        SeqX.range min max |> SeqX.shuffle |> Seq.toList
+        ArrayX.range min max
+        |> ArrayX.shuffle
+        |> Array.toList
