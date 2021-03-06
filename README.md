@@ -14,7 +14,7 @@ This is a simple library to simplify the process of creating a randomized list o
 
 ```
 
-dotnet run --project src/Mixer.Console/Mixer.Console.fsproj -- 0 10_000
+dotnet run --project src/Mixer.Console/Mixer.Console.fsproj -- 1 10_000
 
 ```
 

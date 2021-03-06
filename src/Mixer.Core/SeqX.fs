@@ -1,7 +1,7 @@
 namespace Mixer.Core
 
 module SeqX =
-    /// Generates a sequence of integers from `min` to `max`
+    /// Generates a sequence of integers from `first` to `last`
     let range first last =
         if first > last then
             seq { last .. first } |> Seq.rev

@@ -1,8 +1,8 @@
 module SeqX.Tests
 
+open Mixer.Core
 open System.Collections.Generic
 open Xunit
-open Mixer.Core
 
 [<Fact>]
 let ``SeqX.range 0 0 returns seq { 0 }`` () =
@@ -62,3 +62,16 @@ let ``SeqX.shuffle returns the sequence with the expected values`` () =
     let actual = SeqX.shuffle seq
 
     Assert.All(actual, (fun elem -> Assert.True(Set.contains elem expectedValues)))
+
+[<Fact>]
+let ``SeqX.shuffle multiple times in parallel does not return the same result`` () =
+    let range = (1, 10_000)
+
+    let shuffled =
+        [| range; range; range |]
+        |> Array.map (fun (first, last) -> SeqX.range first last)
+        |> Array.Parallel.map SeqX.shuffle
+
+    Assert.NotEqual<IEnumerable<int>>(shuffled.[0], shuffled.[1])
+    Assert.NotEqual<IEnumerable<int>>(shuffled.[0], shuffled.[2])
+    Assert.NotEqual<IEnumerable<int>>(shuffled.[1], shuffled.[2])
